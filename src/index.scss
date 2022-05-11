@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url(./fonts/Poppins-Light.ttf) format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./fonts/Poppins-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./fonts/Poppins-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+
+
+$dark: #121212;
+$light-dark:#242424;
+$theme-colors: ("dark": #121212, "secondary": #242424, "success": #10ff8d, "danger": rgba(255, 0, 0, 0.849));
+$green:#10ff8d;
+$text-color:#dee4fa;
+
+* {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+#root {
+  min-height: 100vh !important;
+  background-color: $dark;
+}
+
+// header sections
+.nav-link {
+  font-size: 18px !important;
+}
+
+.fanc-tagline {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-size: 15px;
+  word-spacing: 5px;
+}
+
+.fanc-logo img {
+  width: 240px;
+}
+
+.search-form {
+
+  label {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+}
+
+.fanc-search {
+  width: 100%;
+  outline: none;
+  border: 2px solid $green;
+  padding: 7px 45px 7px 32px;
+  background-color: transparent;
+  border-radius: 30px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #495057;
+
+  &:focus {
+    color: #dee4fa;
+  }
+}
+
+.search {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+
+  a {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0%, -50%);
+
+    svg {
+      fill: $green;
+      width: 20px;
+    }
+  }
+}
+
+
+// body sections
+.fanco-content-wrapper {
+  padding: 50px 30px;
+  background: #242424;
+  border-radius: 30px;
+}
+
+button {
+  outline: none;
+  border: none;
+  border: none;
+  font-size: 1rem;
+  background: $green;
+  text-transform: uppercase !important;
+  color: $dark;
+  font-weight: 400;
+  border-radius: 2rem !important;
+  padding: 0.8rem;
+}
+
+.signup-toggle-wrapper {
+  background: $dark;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 0.2rem;
+}
+
+.signup-btn {
+  transition: all 0.25s ease-in-out;
+}
+
+.signup-btn.disable {
+  background-color: transparent;
+  color: #fff;
+}
+
+.tag-line {
+  color: $text-color;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.form-label {
+  font-size: 14px;
+  color: $text-color;
+}
+
+.form-input {
+  outline: none !important;
+  box-shadow: none;
+  border: 2px solid $green !important;
+  background: $light-dark !important;
+  border-radius: 2rem !important;
+  color: #fff !important;
+
+  &:focus,
+  &:focus-visible,
+  &:active {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  &.error {
+    border: 2px solid rgb(216, 0, 0) !important;
+  }
+
+  option {
+    background-color: $light-dark !important;
+    color: #fff;
+  }
+}
+
+select {
+  background-color: transparent;
+
+}
+
+// footer section
+footer img {
+  width: 220px;
+}
+
+.footer-link {
+  color: #4b5050 !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: $green !important;
+  }
+}
+
+.footer-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4b5050 !important;
+}
+
+@media (max-width: 767px) {
+  .fanc-tagline {
+    letter-spacing: 0;
+    font-size: 15px;
+    word-spacing: 0;
+  }
+
+  .tag-line {
+    font-size: 24px;
+  }
+}
+
+
+@import "~bootstrap/scss/bootstrap";
